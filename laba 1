@@ -1,0 +1,95 @@
+завд1 варіант 1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int N;
+cout << "vvedite razmer massiva A: ";
+cin >> N;
+int *A=new int [N];
+int *B=new int[N];
+short count=0;
+
+for (int i = 0; i < N; i++) {
+A = -5 + rand() % 10;
+}
+
+for (int i = 0; i < N; i++)
+{
+if (A > 0) {
+B[count] = A;
+count++;
+}
+}
+for (int i = 0; i < N; i++)
+{
+cout << A[i] << " ";
+}
+cout << endl;
+for (int i = 0; i < count; i++)
+{
+cout << B[i] << " ";
+}
+}
+[/i][/i]
+
+
+
+завдання 2
+#include <iostream>
+ 
+int main()
+{
+   setlocale(LC_CTYPE, "ukr");
+ 
+    int N;
+    std::cout << "к-сть елементів масива: ";
+        std::cin >> N;
+        int *MAS=new int [N];
+ 
+    for (int i=0; i<N; i++) 
+    {
+        std::cout << "MAS["<< i <<"]: ";
+        std::cin >> MAS[i];
+    }
+ 
+    std::cout << " T: ";
+    int T;
+    std::cin >> T;
+ 
+    int max;
+ 
+    for (int i=0; i<N; i++)
+        if (MAS[i]>T) 
+        {
+            max=MAS[i]; 
+            for ( int j=N-1; j>i; j--) 
+                if (max<MAS[j]) max=MAS[j];
+            break;
+        }
+ 
+        std::cout << "MAX: " << max << std::endl;
+    
+                delete []MAS;
+        system("pause");
+        return 0;
+}
+
+
+
+
+завдання 3
+
+double max = min = *X;
+double S = 0;
+for(int i = 0; i < n; i++)
+if(X[i] < a || X[i] > b)
+S+=X[i];
+else
+{
+if(max > X[i])
+   max = X[i];
+if(min < X[i])
+   min = X[i];
+}
